@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    gateway:
+      locator:
+        enabled: true
+      routes:
+        - id: jxc-clinic
+          uri: lb://jxc-clinic
+          predicates:
+            - Path=/clinic/**
+          filters:
+            - StripPrefix=1
+            - name: RequestRateLimiter
+#              args:
+#                redis-rate-limiter.replenishRate: 2
+#                redis-rate-limiter.burstCapacity: 10
+#                key-resolver: "#{@remoteAddrKeyResolver}"
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: jxc-gateway
+server:
+  port: 9999

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangyongle.clininserver.mapper.PatientMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wangyongle.clininserver.entity.Patient">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="age" property="age" />
+        <result column="birthday" property="birthday" />
+        <result column="sex" property="sex" />
+        <result column="phone" property="phone" />
+        <result column="number" property="number" />
+        <result column="address" property="address" />
+        <result column="detailed" property="detailed" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, name, age, birthday, sex, phone, number, address, detailed
+    </sql>
+
+</mapper>

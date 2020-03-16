@@ -1,0 +1,6 @@
+com\sizu\qrcode\config\PayConfig.class
+com\sizu\utils\PropertiesUtil.class
+com\sizu\qrcode\config\PayAutoPropertiesConfig.class
+com\sizu\qrcode\service\AlibabapayQrCodeService.class
+com\sizu\qrcode\config\AliQrPayConfig.class
+com\sizu\utils\PropertiesLoadUtil.class
